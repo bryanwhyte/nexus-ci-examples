@@ -74,11 +74,11 @@ pipeline {
             sh 'npx auditjs@latest sbom --dev > auditjs-dev-bom.xml'
           }
         }
-        stage('CycloneDX SBOM') {
-          steps {
-            sh 'npx @cyclonedx/bom -o cyclonedx-bom.xml'
-          }
-        }
+        // stage('CycloneDX SBOM') {
+        //   steps {
+        //     sh 'npx @cyclonedx/bom -o cyclonedx-bom.xml'
+        //   }
+        // }
       }
     }
     stage('Scan SBOMs') {
